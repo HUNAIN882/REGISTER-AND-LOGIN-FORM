@@ -86,10 +86,40 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: height .2s ease;
+    transform: scale(0);
+}
+.wrapper:active {
+       height: 520px;
 }
 .wrapper .form-box {
     width: 100%;
     padding: 40px;
+}
+.wrapper .form-boxlogin {
+    transition: transform .18s ease;
+    transform: translateX(0);
+   
+}
+.wrapper.active .form-boxlogin{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .form-boxregister {
+     position: absolute;
+     transform: translateX(400px);
+     transition: none;
+}
+.wrapper.active .form-boxregister {
+    transition:  transform .18s ease;
+    transform: translateX(0);
+}
+.logo2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .wrapper .icon-close {
     position: absolute;
